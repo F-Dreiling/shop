@@ -2,11 +2,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-home-header',
-  templateUrl: './home-header.component.html'
+  templateUrl: './header.component.html'
 })
 export class HomeHeaderComponent implements OnInit {
 
-  @Output() columnsCountChanged = new EventEmitter<number>();
+  @Output() columnsCount = new EventEmitter<number>();
   sort = 'Desc';
   itemsShowCount = 12;
 
@@ -25,7 +25,7 @@ export class HomeHeaderComponent implements OnInit {
   }
 
   onColumnsUpdated(newColumns: number): void {
-    this.columnsCountChanged.emit(newColumns);
+    this.columnsCount.emit(newColumns);
   }
 
 }

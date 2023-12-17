@@ -19,7 +19,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import { HomeHeaderComponent } from './pages/home/components/home-header/home-header.component';
+import { HomeHeaderComponent } from './pages/home/components/header/header.component';
 import { FiltersComponent } from './pages/home/components/filters/filters.component';
 
 @NgModule({
