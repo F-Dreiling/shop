@@ -1,13 +1,16 @@
-<mat-card class="tex-center">
-    <div>
-        <img class="mx-auto mb-1 h-[200px]" src="https://via.placeholder.com/150"/>
-        <div class="w-full">
+<mat-card [ngClass]="{'text-center': !fullWidthMode}">
+    <div [ngClass]="{'flex': fullWidthMode}">
+        <img class="mx-auto mb-1 mt-1" [ngClass]="{'h-[200px]': !fullWidthMode, 'h-[360px]': fullWidthMode}" src="https://placehold.co/150"/>
+        <div class="w-full" [ngClass]="{'px-8 flex flex-col justify-between': fullWidthMode}">
             <h5>Shoes</h5>
             <p class="truncate hover:whitespace-normal">Sneakers</p>
             <p>Description</p>
         </div>
         <div class="flex justify-between">
-
+            <span class="text-red-400">{{ '150' | currency:'€' }}</span>
+            <button>
+                <mat-icon class="text-grey-500">shopping_cart</mat-icon>
+            </button>
         </div>
     </div>
 </mat-card>
