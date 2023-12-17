@@ -21,6 +21,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeHeaderComponent } from './pages/home/components/header/header.component';
 import { FiltersComponent } from './pages/home/components/filters/filters.component';
+import { ProductsComponent } from './pages/home/components/products/products.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FiltersComponent } from './pages/home/components/filters/filters.compon
     HeaderComponent,
     HomeComponent,
     HomeHeaderComponent,
-    FiltersComponent
+    FiltersComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
