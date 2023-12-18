@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-const ROWS_HEIGHT: { [id:number]: number } = {1: 400, 3: 335, 4: 350};
+const ROWS_HEIGHT: { [id:number]: number } = {1: 400, 3: 346, 4: 346};
 
 @Component({
   selector: 'app-home',
