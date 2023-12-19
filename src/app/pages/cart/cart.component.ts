@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
     { product: 'https://placehold.co/150',
     name: 'jacket',
     price: 250,
-    quantity: 1,
+    quantity: 2,
     id: 2 }
   ] };
 
