@@ -6,9 +6,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class HomeHeaderComponent implements OnInit {
 
-  @Output() columnsCount = new EventEmitter<number>();
+  @Output() columnsChanged = new EventEmitter<number>();
+  @Output() sortChanged = new EventEmitter<string>();
+  @Output() showCountChanged = new EventEmitter<string>();
+
   sort = 'Desc';
-  itemsShowCount = 12;
+  showCount = '12';
 
   constructor() {}
 
@@ -18,14 +21,16 @@ export class HomeHeaderComponent implements OnInit {
 
   onSortUpdated(newSort: string): void {
     this.sort = newSort;
+    this.sortChanged.emit(newSort);
   }
 
-  onItemsUpdated(newShowCount: number): void {
-    this.itemsShowCount = newShowCount;
+  onShowCountUpdated(newShowCount: string): void {
+    this.showCount = newShowCount;
+    this.showCountChanged.emit(newShowCount);
   }
 
   onColumnsUpdated(newColumns: number): void {
-    this.columnsCount.emit(newColumns);
+    this.columnsChanged.emit(newColumns);
   }
 
 }
