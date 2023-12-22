@@ -52,7 +52,7 @@ export class CartComponent implements OnInit {
   }
 
   onCheckout(): void {
-    this.httpClient.
+    /*this.httpClient.
     post('http://localhost:4242/checkout', {
       items: this.cart.items
     }).
@@ -61,7 +61,7 @@ export class CartComponent implements OnInit {
       stripe?.redirectToCheckout({
         sessionId: res.id
       })
-    });
+    });*/
   }
 
 }
